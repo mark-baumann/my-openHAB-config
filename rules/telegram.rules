@@ -1,0 +1,7 @@
+rule "Send telegram with Fixed Message"
+when
+   Item MarksLampe2 changed
+then
+   val telegramAction = getActions("telegram","telegram:telegramBot:790e65b8b7")
+   telegramAction.sendTelegram("licht status geändert")
+end
